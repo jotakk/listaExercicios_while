@@ -6,10 +6,13 @@
     */
 
     //ENTRADA
-
-
+    let usuario = prompt(`Informe seu nome de usuário:`);
+    let senha = prompt(`Informe sua senha:`);
     //PROCESSAMENTO
-
+    while(senha == usuario){
+        usuario = prompt("Informe o nome de usuário diferente da senha:");
+        senha = prompt("Informe o nome de usuário diferente da senha:");
+    };
 
     //SAÍDA
 

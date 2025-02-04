@@ -11,11 +11,28 @@
     */
 
     //ENTRADA
-
-
+    let nome = prompt(`Informe seu nome:`);
+    let idade = Number(prompt(`Informe sua idade:`));
+    let salario = prompt(`Informe seu salário:`);
+    let sexo = prompt(`Infome seu sexo (f) ou (m):`)
+    let estadoCivil = prompt(`Informe seu estado civil:('s', 'c', 'v', 'd')`)
     //PROCESSAMENTO
-
-
+    while(nome.length <= 3){
+        nome = prompt(`O nome deve ter 3 ou mais caracteres:`);
+    }
+    while(idade > 150 || idade < 0){
+        idade = prompt(`A Idade deve ser entre 0 a 150 anos:`);
+    }
+    while(salario <= 0){
+        salario = prompt(`O salário deve ser maior que 0:`);
+    }
+    while(sexo !== f && sexo !== m){
+        idade = prompt(`Idade deve ser entre 0 a 150 anos:`);
+    }
+    while(estadoCivil !== `s` && estadoCivil !== `c` && estadoCivil !== `v` && estadoCivil !== `d`){
+        idade = prompt(`O estado civil:('s', 'c', 'v', 'd')`);
+    }
+    
     //SAÍDA
 
 </script>
