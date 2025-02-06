@@ -20,11 +20,80 @@
     */
 
     //ENTRADA
-
-
+    let joao = 0;
+    let maria = 0;
+    let nulo = 0;
+    let branco = 0;
+    let voto = Number(prompt(` As opções são:\n
+    1. Candidato Joãozinho\n
+    2. Candidato Mariazinha\n
+    3. Nulo\n
+    4. Branco\n
+    Entre com o seu voto:`));
     //PROCESSAMENTO
-
-
+    while(voto !== 0){
+        if(voto == 1){
+            joao++;
+            voto = Number(prompt(` As opções são:\n
+    1. Candidato Joãozinho\n
+    2. Candidato Mariazinha\n
+    3. Nulo\n
+    4. Branco\n
+    Entre com o seu voto:`));
+        }
+        else if(voto == 2){
+            maria++;
+            voto = Number(prompt(` As opções são:\n
+    1. Candidato Joãozinho\n
+    2. Candidato Mariazinha\n
+    3. Nulo\n
+    4. Branco\n
+    Entre com o seu voto:`));
+        }
+        else if(voto == 3){
+            nulo++;
+            voto = Number(prompt(` As opções são:\n
+    1. Candidato Joãozinho\n
+    2. Candidato Mariazinha\n
+    3. Nulo\n
+    4. Branco\n
+    Entre com o seu voto:`));
+        }
+        else if(voto == 4){
+            branco++;
+            voto = Number(prompt(` As opções são:\n
+    1. Candidato Joãozinho\n
+    2. Candidato Mariazinha\n
+    3. Nulo\n
+    4. Branco\n
+    Entre com o seu voto:`));
+        }
+        else{
+            voto = Number(prompt(`Voto inválido, insira um número válido:\n
+    1. Candidato Joãozinho\n
+    2. Candidato Mariazinha\n
+    3. Nulo\n
+    4. Branco\n`));
+        }
+    }
+    let vencedor = 0;
+    const somaVotos = joao + maria + nulo + branco;
+    const nulosPercent = nulo * 100 / somaVotos;
+    const brancosPercent = branco * 100 / somaVotos;
+    const somaCandidatos = joao + maria;
+    if(somaCandidatos * 0.50 < joao){
+        vencedor = `O vencedor(a) foi: Joãozinho.`;
+    }
+    else if(somaCandidatos * 0.50 < maria){
+        vencedor = `O vencedor(a) foi: Mariazinha.`;
+    }
+    else{
+        vencedor = `Houve um empate.`
+    }
     //SAÍDA
-
+    document.write(`O número de votos de cada candidato:
+    Joãozinho: ${joao}; Mariazinha: ${maria}; Nulos: ${nulo}; Brancos:${branco}.</br>`);
+    document.write(`A porcentagem de votos nulos: ${nulosPercent.toFixed(2)}%</br>`);
+    document.write(`A porcentagem de votos brancos:  ${brancosPercent.toFixed(2)}%</br>`);
+    document.write(`${vencedor}`);
 </script>

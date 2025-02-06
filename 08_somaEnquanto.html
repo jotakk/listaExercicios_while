@@ -5,11 +5,15 @@
     */
     
     //ENTRADA
-
-
+    let numero = Number(prompt(`Informe um numero:\n
+    O programa para quando você inserir 0 e então exibe a soma total.`))
+    let soma = 0;
     //PROCESSAMENTO
-
+    while(numero !== 0){
+        soma =+ numero
+        numero = Number(prompt(`Informe outro numero:`))
+    }
 
     //SAÍDA
-    
+    alert(`A somados números apresentados foi: ${soma}`);
 </script>

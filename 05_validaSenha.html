@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
-    let senh
+    const senhaCorreta = `1234`;
+    let senha = (prompt(`Informe uma senha formada de quatro numeros inteiros:`));
 
     //PROCESSAMENTO
-
+    while(senha !== senhaCorreta){
+        senha = (prompt(`Senha Incorreta, informe uma senha válida:`));
+    }
 
     //SAÍDA
-
+    alert(`Senha Correta`);
 </script>
