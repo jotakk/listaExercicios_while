@@ -5,11 +5,18 @@
     */
 
     //ENTRADA
-
-
+    let numero = (Math.floor(Math.random() * 30));
+    let adivinhar = Number(prompt(`Adivinhe o número de 1 a 30:`));
     //PROCESSAMENTO
-
+    while(adivinhar < numero || adivinhar > numero){
+        if(adivinhar < numero){
+            adivinhar = Number(prompt(`Maior:`));
+        }
+        else if(adivinhar > numero){
+            adivinhar = Number(prompt(`Menor:`));
+        }
+    }
 
     //SAÍDA
-    
+    alert(`Você acertou, o número era: ${numero}`);
 </script>
